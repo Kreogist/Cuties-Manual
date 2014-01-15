@@ -41,7 +41,7 @@
 
 <h3>
 <a name="compile" class="anchor" href="#compile"><span class="octicon octicon-link"></span></a>Compile</h3>
-<p>To compile your program, you have to check your compile configure. For more information, see <a>Compiler Configure</a>.<br/>Select Main Menu, Execute, Compile. Cuties will show compile dock and begin compile process. In the compile dock, the compile infos will display on the text panel. It will be something like this:</p>
+<p>To compile your program, you have to check your compile configure. For more information, see <a>Compiler Configure</a>.<br/>Select Main Menu, Execute, Compile. Cuties will show compile progress and begin compile process. When compile finished, if there's any errors or warnings, compile dock will appear. You can also use "Compile Dock" in "View" menu to show up compile dock. In the compile dock, the compile infos will display on the text panel. It will be something like this:</p>
 
 <pre><code>22:32:24 Preparing Compiler.
 22:32:24 Current Compiler Details:
@@ -52,10 +52,11 @@ g++ 4.2.1
 </code></pre>
 
 <p>Cuties will read your configure and try to get the compiler details. And then try to compile the file via compiler with the configure. All the compiler output will be shown in the text panel. Those infos will be arranged and displayed in the tree view panel as well. You can get more information about the error like the position of the error occur by clicking one error line of the tree view panel. Double click one line will jump to the line error occur.</p>
+<p>If there is no errors and no warnings, Cuties will show you a "Compile Success", and the progress will automatically hide. If there are only warnings, Cuties will also give you a "Compile Success" and hide the compile progress, but Compile Dock will show up.</p>
 
 <h3>
 <a name="run" class="anchor" href="#run"><span class="octicon octicon-link"></span></a>Run</h3>
-<p>Before you run your program, make sure your program has been compiled. If not, Cuties will mentioned you to compile your program first. Unlike other IDEs, Cuties provides you an awesome binary executor, <i>"kciConsoleRunner"</i>. It will show you the totally running time of your program.</p>
+<p>Before you run your program, make sure your program has been compiled. If not, Cuties will mentioned you to compile your program first. Unlike other IDEs, Cuties provides you an awesome binary executor, <i>"kciConsoleRunner"</i>. It will show you the totally running time of your program, and auto pause the program. So you do not need to write "system("PAUSE");" these auto pause code which could only be used in Windows in your code like what you did 10 years before.</p>
 
       </section>
     </div>

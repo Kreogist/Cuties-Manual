@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="../../stylesheets/stylesheet.css">
 
-    <title>Building your program - Kreogist Cuties</title>
+    <title>构建你的程序 - Kreogist Cuties</title>
   </head>
 
   <body>
@@ -16,7 +16,7 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <h1 id="project_title">Building your program</h1>
+          <h1 id="project_title">构建你的程序</h1>
         </header>
     </div>
 
@@ -24,48 +24,47 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
 
-<p>This section will show you how to compile your source code in Cuties and execute the binary.</p>
+<p>这一节将会向您展示如何在 Cuties 中编译源代码并执行编译好二进制文件。</p>
 
 <h3>
-<a name="compile-your-source-code" class="anchor" href="#compile-your-source-code"><span class="octicon octicon-link"></span></a>Compile your source code</h3>
-<p>In Cuites, you don't need to compile your source code, link, or build execution manually. We provide three function to help you compile and build execution automatically:</p>
+<a name="compile-your-source-code" class="anchor" href="#compile-your-source-code"><span class="octicon octicon-link"></span></a>编译你的源代码</h3>
+<p>在 Cuites 中，你无需手动去编译、连接、构建源代码。我们提供了三种编译、构建的方式：</p>
 <ul>
-  <li><a href="#compile-and-run">Compile and Run</a></li>
-  <li><a href="#compile">Compile</a></li>
-  <li><a href="#run">Run</a></li>
+  <li><a href="#compile-and-run">编译运行</a></li>
+  <li><a href="#compile">编译</a></li>
+  <li><a href="#run">运行</a></li>
 </ul>
 
 <h3>
-<a name="compile-and-run" class="anchor" href="#compile-and-run"><span class="octicon octicon-link"></span></a>Compile and Run</h3>
-<p>Compile and Run command can compile your file via the compiler which you set or provided by default, and launch kciConsoleRunner to execute the binary. For more information, see <a href="#compile">Compile</a> and <a href="#run">Run</a>.</p>
+<a name="compile-and-run" class="anchor" href="#compile-and-run"><span class="octicon octicon-link"></span></a>编译运行</h3>
+<p>编译运行能够使用您设定好的编译器或者使用默认编译器编译您的文件，并且自动运行 kciConsoleRunner 去执行编译好的文件。如需获得更多有关编译和运行信息，请参阅<a href="#compile">编译</a>和<a href="#run">运行</a>。</p>
 
 <h3>
-<a name="compile" class="anchor" href="#compile"><span class="octicon octicon-link"></span></a>Compile</h3>
-<p>To compile your program, you have to check your compile configure. For more information, see <a>Compiler Configure</a>.<br/>Select Main Menu, Execute, Compile. Cuties will show compile dock and begin compile process. In the compile dock, the compile infos will display on the text panel. It will be something like this:</p>
+<a name="compile" class="anchor" href="#compile"><span class="octicon octicon-link"></span></a>编译</h3>
+<p>如需编译您的代码，请先检查您的编译器配置。如需获得更多有关编译器设置的信息，请参阅<a>编译器设置</a>。<br/>选择“运行”菜单中的“编译”，Cuties 将会显示编译过程进度并开始编译过程。 当编译完成时，如果发生错误或者存在警告，编译器栏将会出现。你也可以通过“显示”菜单中的“编译器栏”来显示编译器栏。在编译器栏中，编译器信息将会显示在文本视图中，这里有个例子：</p>
 
-<pre><code>22:32:24 Preparing Compiler.
-22:32:24 Current Compiler Details:
-g++ 4.2.1
-22:32:24 Compile Output:
+<pre><code>09:10:14 准备编译器。
+09:10:14 当前编译器详细信息：
+gcc 4.7.0
+09:10:14 编译命令：
 /usr/bin/gcc /Users/Saki/helloworld.c -lm -ggdb -Wall -o /Users/Saki/helloworld
-22:32:24 Compile Successful.
-</code></pre>
+09:10:15 编译成功。</code></pre>
 
-<p>Cuties will read your configure and try to get the compiler details. And then try to compile the file via compiler with the configure. All the compiler output will be shown in the text panel. Those infos will be arranged and displayed in the tree view panel as well. You can get more information about the error like the position of the error occur by clicking one error line of the tree view panel. Double click one line will jump to the line error occur.</p>
-
+<p>Cuties 将会读取您的配置，并尝试获取编译器的详细信息。之后尝试通过您配置的编译器去编译文件。所有编译器的输出将会在左侧的文本视图中显示。这些信息将会被重新整理，并同时在右侧的树状视图之中显示。您可以单击树状视图中的每一项来获取更多有关该项的信息，例如：错误所在的位置，以及错误所在的文件等等。双击其中一项即可跳转到对应的错误位置。</p>
+<p>如果没有发生任何错误或者警告，Cuties 将会显示“编译成功”，并且将编译进度隐藏。如果只有警告，Cuties 同样会显示“编译成功”，但是编译器栏将会显示。</p>
 <h3>
-<a name="run" class="anchor" href="#run"><span class="octicon octicon-link"></span></a>Run</h3>
-<p>Before you run your program, make sure your program has been compiled. If not, Cuties will mentioned you to compile your program first. Unlike other IDEs, Cuties provides you an awesome binary executor, <i>"kciConsoleRunner"</i>. It will show you the totally running time of your program.</p>
+<a name="run" class="anchor" href="#run"><span class="octicon octicon-link"></span></a>运行</h3>
+<p>在您运行程序之前，请确认您的程序已经编译，如果没有编译，Cuties将会提醒您先编译您的程序。和其它的集成开发环境不同，Cuties 提供了一个很好的运行工具：<i>kciConsoleRunner</i>。它将会告诉您本次运行一共使用了多长时间，并自动暂停以显示运行结果。所以您不需要在您的程序中再写入十几年前人们才会去写的类似“system("PAUSE");”这样只能在 Windows 使用的暂停语句。</p>
 
       </section>
     </div>
 
-    <!-- FOOTER  -->
+	<!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">© 2013 Kreogist Dev Team. Documentation contributions included herein are the copyrights of their respective owners.</p>
-		<p class="license">The documentation provided herein is licensed under the terms of the <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation License version 1.3</a> as published by the Free Software Foundation.</p>
-		<p class="homelink">Documentation sources may be obtained from <a href="http://kreogist.github.io/Cuties/">Kreogist Dev Team</a></p>
+        <p class="copyright">© 2013 Kreogist Dev Team. 贡献的文档的著作权归其贡献者所有。</p>
+		<p class="license">本文档在由自由软件基金会所发行的<a href="http://www.gnu.org/licenses/fdl.html">GNU 自由文档许可证 1.3版</a>的协议下颁发许可。</p>
+		<p class="homelink">本文档可以从 <a href="http://kreogist.github.io/Cuties/">Kreogist Dev Team</a> 处获得。</p>
       </footer>
     </div>
 
