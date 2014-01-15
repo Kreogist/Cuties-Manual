@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Kreogist Cuties : A Smart IDE written by Qt." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../../stylesheets/stylesheet.css">
+
+    <title>構建你的程式 - Kreogist Cuties</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title">構建你的程式</h1>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+<p>這一節將會向您展示如何在 Cuties 中編譯原始程式碼並執行編譯好二進位檔案。</p>
+
+<h3>
+<a name="compile-your-source-code" class="anchor" href="#compile-your-source-code"><span class="octicon octicon-link"></span></a>編譯你的原始程式碼</h3>
+<p>在 Cuites 中，你無需手動去編譯、連接、構建原始程式碼。我們提供了三種編譯、構建的方式：</p>
+<ul>
+  <li><a href="#compile-and-run">編譯運行</a></li>
+  <li><a href="#compile">編譯</a></li>
+  <li><a href="#run">運行</a></li>
+</ul>
+
+<h3>
+<a name="compile-and-run" class="anchor" href="#compile-and-run"><span class="octicon octicon-link"></span></a>編譯運行</h3>
+<p>編譯運行能夠使用您設定好的編譯器或者使用默認編譯器編譯您的檔，並且自動運行 kciConsoleRunner 去執行編譯好的檔。如需獲得更多有關編譯和運行資訊，請參閱<a href="#compile">編譯</a>和<a href="#run">運行</a>。</p>
+
+<h3>
+<a name="compile" class="anchor" href="#compile"><span class="octicon octicon-link"></span></a>編譯</h3>
+<p>如需編譯您的代碼，請先檢查您的編譯器配置。如需獲得更多有關編譯器設置的資訊，請參閱<a>編譯器設置</a>。<br/>選擇“運行”功能表中的“編譯”，Cuties 將會顯示編譯過程進度並開始編譯過程。 當編譯完成時，如果發生錯誤或者存在警告，編譯器欄將會出現。你也可以通過“顯示”功能表中的“編譯器欄”來顯示編譯器欄。在編譯器欄中，編譯器資訊將會顯示在文本視圖中，這裡有個例子：</p>
+
+<pre><code>09:10:14 準備編譯器。
+09:10:14 當前編譯器詳細資訊：
+gcc 4.7.0
+09:10:14 編譯命令：
+/usr/bin/gcc /Users/Saki/helloworld.c -lm -ggdb -Wall -o /Users/Saki/helloworld
+09:10:15 編譯成功。</code></pre>
+
+<p>Cuties 將會讀取您的配置，並嘗試獲取編譯器的詳細資訊。之後嘗試通過您配置的編譯器去編譯檔。所有編譯器的輸出將會在左側的文本視圖中顯示。這些資訊將會被重新整理，並同時在右側的樹狀視圖之中顯示。您可以按一下樹狀視圖中的每一項來獲取更多有關該項的資訊，例如：錯誤所在的位置，以及錯誤所在的檔等等。按兩下其中一項即可跳轉到對應的錯誤位置。</p>
+<p>如果沒有發生任何錯誤或者警告，Cuties 將會顯示“編譯成功”，並且將編譯進度隱藏。如果只有警告，Cuties 同樣會顯示“編譯成功”，但是編譯器欄將會顯示。</p>
+<h3>
+<a name="run" class="anchor" href="#run"><span class="octicon octicon-link"></span></a>運行</h3>
+<p>在您運行程式之前，請確認您的程式已經編譯，如果沒有編譯，Cuties將會提醒您先編譯您的程式。和其它的整合式開發環境不同，Cuties 提供了一個很好的運行工具：<i>kciConsoleRunner</i>。它將會告訴您本次運行一共使用了多長時間，並自動暫停以顯示運行結果。所以您不需要在您的程式中再寫入十幾年前人們才會去寫的類似“system("PAUSE");”這樣只能在 Windows 使用的暫停語句。</p>
+
+      </section>
+    </div>
+
+	<!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">© 2013 Kreogist Dev Team. 貢獻的文檔的著作權歸其貢獻者所有。</p>
+		<p class="license">本文檔在由自由軟體基金會所發行的<a href="http://www.gnu.org/licenses/fdl.html">GNU 自由文檔許可證 1.3版</a>的協定下頒發許可。</p>
+		<p class="homelink">本文檔可以從 <a href="http://kreogist.github.io/Cuties/">Kreogist Dev Team</a> 處獲得。</p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
